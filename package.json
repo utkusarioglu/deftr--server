@@ -1,6 +1,9 @@
 {
   "name": "@newspaper/server",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Utku Sarioglu <utkusarioglu@hotmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "lerna": "^3.22.1"
   }
