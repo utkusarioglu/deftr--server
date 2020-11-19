@@ -2,12 +2,5 @@
   "name": "@newspaper/server-auth",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "license": "MIT",
-  "scripts": {
-    "build": "run-s clean build:tsc",
-    "build:tsc": "tsc -b",
-    "clean": "rimraf lib coverage tsconfig.tsbuildinfo",
-    "start": "node lib/index.js",
-    "start:dev": "ts-node-dev src/index.ts"
-  }
+  "license": "MIT"
 }
