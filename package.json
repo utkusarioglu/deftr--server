@@ -1,10 +1,29 @@
 {
   "name": "@newspaper/server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Utku Sarioglu <utkusarioglu@hotmail.com>",
   "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.20.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "run-p clean run-s build:api",
+    "build:api": "tsc -b ./packages/tsconfig.api.json",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna run --parallel clean",
+    "release": "lerna publish",
+    "test": "jest"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.1"
   }
 }
