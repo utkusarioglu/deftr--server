@@ -8,7 +8,7 @@
     "build:tsc": "tsc -b",
     "clean": "rimraf lib coverage tsconfig.tsbuildinfo",
     "start": "node lib/index.js",
-    "start:dev": "ts-node-dev src/index.ts"
+    "start:watch": "tsc -w"
   },
   "dependencies": {
     "@newspaper/server-mock-data": "^1.0.0",

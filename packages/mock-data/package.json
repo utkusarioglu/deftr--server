@@ -10,6 +10,7 @@
   "scripts": {
     "build": "run-s clean build:tsc",
     "build:tsc": "tsc -b",
-    "clean": "rimraf lib coverage tsconfig.tsbuildinfo"
+    "clean": "rimraf lib coverage tsconfig.tsbuildinfo",
+    "start:watch": "tsc -w"
   }
 }

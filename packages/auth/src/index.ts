@@ -1,3 +1,3 @@
-export function something() {
-  return 'something!!!';
+export function authString() {
+  return 'auth ';
 }
