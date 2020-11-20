@@ -1,9 +1,14 @@
 import Express, { Request, Response } from 'express';
 import cors from 'cors';
 import { ServerResponse } from '@newspaper/api';
+import { createUserRoles } from '@newspaper/server-mock-data';
+
+const { HTTP_PORT } = process.env;
 
 const app = Express();
 app.use(cors());
+
+createUserRoles();
 
 app.use('/:request', (req: Request, res: Response) => {
   const response: ServerResponse = {
@@ -12,7 +17,7 @@ app.use('/:request', (req: Request, res: Response) => {
   };
   res.send(JSON.stringify(response));
 });
-const HTTP_PORT = 4000;
+
 app.listen(HTTP_PORT, () => {
   console.log(`App is listening on ${HTTP_PORT}`);
 });
