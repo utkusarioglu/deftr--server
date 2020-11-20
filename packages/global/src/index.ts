@@ -4,7 +4,7 @@ declare global {
      * Custom environment variables used by the server
      */
     interface ProcessEnv {
-      HTTP_PORT: number;
+      HTTP_PORT: string;
       POSTGRES_USER: string;
       POSTGRES_PASS: string;
       POSTGRES_DB: string;
