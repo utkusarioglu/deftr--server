@@ -2,8 +2,6 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "outDir": "./lib",
-    "rootDir": "../",
     "composite": true,
     "removeComments": true,
     "importHelpers": true,

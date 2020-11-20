@@ -1,9 +1,17 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    // "rootDir": "../../../",
-    "composite": true
-    // "outDir": "../../lib"
+    "rootDir": "src",
+    "composite": true,
+    "outDir": "lib"
   },
-  "include": ["src", "../../../api/src", "../mock-data/src"]
+  "include": ["src"],
+  "references": [
+    {
+      "path": "../../../api"
+    },
+    {
+      "path": "../mock-data"
+    }
+  ]
 }
