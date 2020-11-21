@@ -10,6 +10,7 @@
     "start:watch": "tsc -w >/dev/null"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express-session": "^1.17.3",
     "@types/passport": "^1.0.4",
     "@types/passport-local": "^1.0.33",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
     "express-session": "^1.17.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"

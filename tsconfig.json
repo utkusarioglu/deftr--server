@@ -10,7 +10,8 @@
     "baseUrl": "./",
     "paths": {
       "@newspaper/api": ["../api/src"],
-      "@newspaper/server-mock-data": ["./packages/mock-data/src"]
+      "@newspaper/server-mock-data": ["./packages/mock-data/src"],
+      "@newspaper/server-postgres": ["./packages/postgres/src"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

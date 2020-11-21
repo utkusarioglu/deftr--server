@@ -1,3 +1,6 @@
+require('dotenv').config({
+  path: require('path').join(__dirname, '../../../.env'),
+});
 import passport from 'passport';
 import { Application } from 'express';
 import passportLocal from 'passport-local';
