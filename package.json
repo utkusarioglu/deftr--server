@@ -17,15 +17,16 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "start": "node ./packages/base/lib/index.js",
+    "start:dev": "run-p start:watch start:reloader",
+    "start:watch": "lerna run --parallel start:watch",
+    "start:reloader": "nodemon",
     "build": "run-p clean build:each",
     "build:each": "lerna run build",
-    "bootstrap": "lerna bootstrap",
     "clean": "lerna run --parallel clean",
+    "bootstrap": "lerna bootstrap",
     "release": "lerna publish",
-    "test": "jest",
-    "start:watch": "lerna run --parallel start:watch",
-    "nodemon": "nodemon",
-    "start:dev": "run-p start:watch nodemon"
+    "test": "jest"
   },
   "dependencies": {
     "rimraf": "^3.0.1"
