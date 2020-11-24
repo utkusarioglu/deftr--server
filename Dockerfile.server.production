@@ -1,14 +1,14 @@
 # Build code inside container
 FROM node:latest as Builder
-COPY ./api /usr/home/app/api
-COPY ./server /usr/home/app/server
-WORKDIR /usr/home/app/server
+COPY ./deftr--public-api /usr/home/app/deftr--public-api
+COPY ./deftr--server /usr/home/app/deftr--server
+WORKDIR /usr/home/app/deftr--server
 RUN yarn
 RUN ["yarn", "add", "lerna", "-W"]
 RUN ["yarn", "bootstrap"]
 RUN ["yarn", "build"]
 
-WORKDIR /usr/home/app/server/packages
+WORKDIR /usr/home/app/deftr--server/packages
 RUN rm -rf ./**/src ./tsconfig.json ./yarn.lock
 
 # Move code to clean, smaller container
@@ -17,5 +17,5 @@ COPY --from=Builder /usr/home/app /usr/home/app/
 
 EXPOSE 4000
 
-WORKDIR /usr/home/app/server
+WORKDIR /usr/home/app/deftr--server
 ENTRYPOINT [ "yarn", "start" ]
