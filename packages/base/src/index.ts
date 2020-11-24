@@ -4,9 +4,9 @@ require('dotenv').config({
 import Express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { ServerResponse } from '@newspaper/api';
-import { createMockUsers } from '@newspaper/server-mock-data';
-import { enableAuth, enableSession } from '@newspaper/server-auth';
+import { ServerResponse } from '@deftr/api';
+import { createMockUsers } from '@deftr/server-mock-data';
+import { enableAuth, enableSession } from '@deftr/server-auth';
 
 const { HTTP_PORT } = process.env;
 

@@ -1,5 +1,5 @@
 {
-  "name": "@newspaper/server-mock-data",
+  "name": "@deftr/server-mock-data",
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",

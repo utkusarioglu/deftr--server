@@ -9,9 +9,9 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@newspaper/api": ["../api/src"],
-      "@newspaper/server-mock-data": ["./packages/mock-data/src"],
-      "@newspaper/server-postgres": ["./packages/postgres/src"]
+      "@deftr/api": ["../api/src"],
+      "@deftr/server-mock-data": ["./packages/mock-data/src"],
+      "@deftr/server-postgres": ["./packages/postgres/src"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

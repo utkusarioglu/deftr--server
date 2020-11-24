@@ -1,7 +1,7 @@
 require('dotenv').config({
   path: require('path').join(__dirname, '../../../.env'),
 });
-import db, { ROLES } from '@newspaper/server-postgres';
+import db, { ROLES } from '@deftr/server-postgres';
 const { NODE_ENV } = process.env;
 
 export function createMockUsers() {

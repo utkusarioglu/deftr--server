@@ -1,5 +1,5 @@
 {
-  "name": "@newspaper/server-base",
+  "name": "@deftr/server-base",
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "start:watch": "tsc -w >/dev/null"
   },
   "dependencies": {
-    "@newspaper/server-mock-data": "^1.0.0",
+    "@deftr/server-mock-data": "^1.0.0",
     "body-parser": "^1.19.0",
     "connect-redis": "^5.0.0",
     "cors": "^2.8.5",

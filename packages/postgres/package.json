@@ -1,5 +1,5 @@
 {
-  "name": "@newspaper/server-postgres",
+  "name": "@deftr/server-postgres",
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",

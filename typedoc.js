@@ -1,5 +1,5 @@
 module.exports = {
-  name: '@newspaper/server',
+  name: '@deftr/server',
   inputFiles: ['./packages'],
   mode: 'modules',
   out: 'docs',
