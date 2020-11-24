@@ -1,0 +1,21 @@
+# Build code inside container
+FROM node:latest as Builder
+COPY ./api /usr/home/app/api
+COPY ./server /usr/home/app/server
+WORKDIR /usr/home/app/server
+RUN yarn
+RUN ["yarn", "add", "lerna", "-W"]
+RUN ["yarn", "bootstrap"]
+RUN ["yarn", "build"]
+
+WORKDIR /usr/home/app/server/packages
+RUN rm -rf ./**/src ./tsconfig.json ./yarn.lock
+
+# Move code to clean, smaller container
+FROM node:alpine
+COPY --from=Builder /usr/home/app /usr/home/app/
+
+EXPOSE 4000
+
+WORKDIR /usr/home/app/server
+ENTRYPOINT [ "yarn", "start" ]

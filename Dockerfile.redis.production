@@ -1,0 +1,8 @@
+FROM redis
+
+COPY ./server/mounts/redis/config/redis.conf /usr/local/etc/redis/redis.conf
+COPY ./server/mounts/redis/scripts /scripts
+
+EXPOSE 6379
+
+ENTRYPOINT [ "bash", "-c", "/scripts/init.sh" ]
