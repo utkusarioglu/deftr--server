@@ -8,7 +8,7 @@
   "include": ["./src"],
   "references": [
     {
-      "path": "../../../api"
+      "path": "../../../deftr--public-api"
     },
     {
       "path": "../postgres"

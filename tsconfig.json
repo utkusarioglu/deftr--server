@@ -9,7 +9,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@deftr/api": ["../api/src"],
+      "@deftr/api": ["../deftr--public-api/src"],
       "@deftr/server-mock-data": ["./packages/mock-data/src"],
       "@deftr/server-postgres": ["./packages/postgres/src"]
     },
