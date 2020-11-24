@@ -3,11 +3,11 @@ const { POSTGRES_USER, POSTGRES_PASS, POSTGRES_DB } = process.env as {
 };
 
 const DB_CONFIG = {
-  HOST: "postgres",
+  HOST: 'deftr--postgres',
   USER: POSTGRES_USER,
   PASSWORD: POSTGRES_PASS,
   DB: POSTGRES_DB,
-  dialect: "postgres" as "postgres",
+  dialect: 'postgres' as 'postgres',
   pool: {
     max: 5,
     min: 0,
