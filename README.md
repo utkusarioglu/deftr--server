@@ -1,8 +1,6 @@
 # deftr
 
-## What is this?
-
-I don't know yet
+Server-side code for the Deftr project
 
 ## The Stack
 
@@ -22,6 +20,11 @@ Please refer to docs folder
 
 Please refer to [scripts.md](scripts.md) for the scripts naming and behavior
 conventions.
+
+### Documentation
+
+Automatic documentation can be created with the command `yarn doc`. This will
+use typedoc to create the documentation under `./docs`.
 
 ### The Reloader
 
