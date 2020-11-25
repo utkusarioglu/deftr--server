@@ -21,7 +21,7 @@ Please refer to docs folder
 Please refer to [scripts.md](scripts.md) for the scripts naming and behavior
 conventions.
 
-### Documentation
+### Automatic Documentation
 
 Automatic documentation can be created with the command `yarn doc`. This will
 use typedoc to create the documentation under `./docs`.
