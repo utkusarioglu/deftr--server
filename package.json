@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@strictsoftware/typedoc-plugin-monorepo": "^0.3.1",
+    "jest": "^26.6.3",
     "lerna": "^3.20.2",
     "nodemon": "^2.0.6",
     "npm-run-all": "^4.1.5",
@@ -28,12 +29,16 @@
     "clean": "lerna run --parallel clean",
     "bootstrap": "lerna bootstrap",
     "release": "lerna publish",
-    "test": "jest",
+    "test": "$(yarn bin)/jest",
     "create:doc": "$(yarn bin)/typedoc",
     "clean:doc": "rimraf docs",
     "doc": "run-p clean:doc create:doc"
   },
   "dependencies": {
     "rimraf": "^3.0.1"
+  },
+  "peerDependencies": {
+    "ts-jest": "^26.4.4",
+    "@types/jest": "^26.0.15"
   }
 }
