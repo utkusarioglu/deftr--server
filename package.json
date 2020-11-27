@@ -30,6 +30,7 @@
     "bootstrap": "lerna bootstrap",
     "release": "lerna publish",
     "test": "$(yarn bin)/jest",
+    "test:ci": "$(yarn bin)/jest test --coverage --no-watchman a",
     "create:doc": "$(yarn bin)/typedoc",
     "clean:doc": "rimraf docs",
     "doc": "run-p clean:doc create:doc"
