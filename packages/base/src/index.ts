@@ -4,17 +4,24 @@ require('dotenv').config({
 import Express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { ServerResponse } from '@deftr/api';
 import { createMockUsers } from '@deftr/server-mock-data';
 import { enableAuth, enableSession } from '@deftr/server-auth';
+import expressWs from 'express-ws';
 
 const { HTTP_PORT } = process.env;
 
-const app = Express();
+const { app } = expressWs(Express());
+
+import websocketRouter from './routes/websocket';
+import restRouter from './routes/rest';
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 enableSession(app);
+
+app.use('/ws', websocketRouter);
+app.use('/rest', restRouter);
 
 app.listen(HTTP_PORT, () => {
   console.log(`App is listening on ${HTTP_PORT}`);
