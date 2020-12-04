@@ -8,8 +8,7 @@ import { createMockUsers } from '@deftr/server-mock-data';
 import { enableAuth, enableSession } from '@deftr/server-auth';
 import expressWs from 'express-ws';
 
-const { HTTP_PORT } = process.env;
-
+const { SERVER_PORT } = process.env;
 const { app } = expressWs(Express());
 
 import websocketRouter from './routes/websocket';
@@ -23,10 +22,6 @@ enableSession(app);
 app.use('/ws', websocketRouter);
 app.use('/rest', restRouter);
 
-app.listen(HTTP_PORT, () => {
-  console.log(`App is listening on ${HTTP_PORT}`);
+app.listen(SERVER_PORT, () => {
+  console.log(`App is listening on ${SERVER_PORT}`);
 });
-
-enableAuth(app);
-
-createMockUsers();
